@@ -1,0 +1,15 @@
+{
+  "name": "tfl-journey-planner",
+  "version": "1.0.0",
+  "description": "A node js wrapper for the TFL journey planner API",
+  "main": "app.js",
+  "dependencies": {
+    "request": "^2.58.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alicia Sykes",
+  "license": "ISC"
+}
