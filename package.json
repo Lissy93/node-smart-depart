@@ -2,7 +2,7 @@
   "name": "tfl-journey-planner",
   "version": "1.0.0",
   "description": "A node js wrapper for the TFL journey planner API",
-  "main": "app.js",
+  "main": "tfl-journey-planner.js",
   "dependencies": {
     "request": "^2.58.0"
   },
@@ -11,5 +11,22 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alicia Sykes",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lissy93/node-tfl-journey-planner.git"
+  },
+  "keywords": [
+    "TFL",
+    "journey",
+    "planner",
+    "node",
+    "js",
+    "api",
+    "wrapper"
+  ],
+  "bugs": {
+    "url": "https://github.com/Lissy93/node-tfl-journey-planner/issues"
+  },
+  "homepage": "https://github.com/Lissy93/node-tfl-journey-planner"
 }
