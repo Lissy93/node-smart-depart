@@ -37,7 +37,8 @@ var params = {
 ```
 
 ### Make simple request
-```journeyPlanner.fetchRoutes(params, credentials.tfl, function(results) {
+```
+journeyPlanner.fetchRoutes(params, credentials.tfl, function(results) {
     console.log(results); // Do whatever with the results
 });
 ```
