@@ -2,14 +2,9 @@
 
 A simple wrapper for the TFL Journey planner
 
-##Usage
 ###Inatall
 ```
 npm install git://github.com/Lissy93/node-tfl-journey-planner.git
-```
-And install dependancies
-```
-npm install
 ```
 
 ### Include
@@ -19,14 +14,25 @@ var journeyPlanner = require('tfl-journey-planner');
 
 ### Authenticating
 You will need to sign up for an API key at https://api-portal.tfl.gov.uk/signup
-Create a JSON similar to this:
+Create a JSON object similar to the one below
+
+    var config = {};
+  
+    tfl = {
+        appId: 'xxxxxxxx',
+        appKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    };
+    
+    module.exports = config;
+
+
+If you have put your credentials in a seperate file like above you can include them in your main JavaScript file the normal way
 ```
-tfl = {
-    appId: 'xxxxxxxx',
-    appKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-};
+var credentials = require('../helpers/config');
 ```
-You should put it in a seperate file along with your other API keys and add file to your .gitignore
+
+Also don't forget to add the file with your API keys to .gitignore
+
 
 ### Required Paramaters
 ```
@@ -45,9 +51,9 @@ journeyPlanner.fetchRoutes(params, credentials.tfl, function(results) {
 
 ### Additional Paramaters
 * **When**
- * date - e.g. ```20150620```  *would be 20th June 2015*
- * time - e.g. ```2213```  *would be 10:13 pm*
- * type - ```"departing" | "arriving"```
+ * **date** - e.g. ```20150620```  *would be 20th June 2015*
+ * **time** - e.g. ```2213```  *would be 10:13 pm*
+ * **type** - ```"departing" | "arriving"```
 * **Mode** - comma seperated list of all modes ``` "public-bus,overground,train,tube,coach,dlr,cablecar,tram,river,walking,cycle"```
 * **Preference** - one of the following ``` "leastinterchange" | "leasttime" | "leastwalking"``
 * **Accesability** - comma seperated list ```"noSolidStairs,noEscalators,noElevators,stepFreeToVehicle,stepFreeToPlatform"```
@@ -69,7 +75,6 @@ var params = {
 ```
 
 
-** Enjoy planning your journeys :) **
 
 [TFL]:https://api-portal.tfl.gov.uk/signup
 [@lissy_sykes]:http://twitter.com/lissy_sykes
