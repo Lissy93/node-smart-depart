@@ -29,8 +29,6 @@ function fetchRoutes(params, credentials, callback) {
             +'&numberOfTrips='+(params.numTrips || 3)
             +'&app_id=' + credentials.appId+'&app_key='+credentials.appKey
 
-    console.log(url);
-
 
     request({
         url: url,
