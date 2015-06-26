@@ -1,0 +1,7 @@
+extend layout
+block content
+    h2 Real-time visualisation of the sentiment towards Tweets on the London Underground
+    script(type='text/javascript').
+        var results = !{JSON.stringify(results)};
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js')
+    script(src='/javascripts/sentiment.js')

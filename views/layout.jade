@@ -1,0 +1,32 @@
+doctype
+html
+  head
+    title #{title} - Smart Depart
+    link(href='http://fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+  body
+    header
+      img.pull-left(src='/images/logo_half.png' alt='app icon')
+      a(href='/')
+        h1 Smart Depart
+      div.pull-right
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='http://smart-depart.herokuapp.com/sentiment-analysis') Sentiment Analysis Visualisation
+          li
+            a(href='https://github.com/OlliePoole/SmartDepart') Source Code
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+    footer
+      p <b>Smart Depart</b> - The smart alarm clock that wakes you up earlier if there are delays in your comute journey
+      p.pull-right
+        | &copy; &nbsp;
+        b: a(href='https://twitter.com/Lissy_Sykes') Alicia Sykes
+        | &nbsp; and &nbsp;
+        b: a(href='https://twitter.com/OllieTPoole') Ollie Poole
+        | &nbsp; 2015
